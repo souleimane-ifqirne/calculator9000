@@ -1,9 +1,16 @@
 import { useState } from 'react'
 
-function Title(props) {
+
+const Title = (props) => {
+    const TitleStyle = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'    
+    }
     return (
-        <h1>{props.text}</h1>
-    );
+        <h1 style={{...TitleStyle}}>{props.text}</h1>
+    )
 }
+
 
 export default Title
