@@ -1,20 +1,23 @@
-import { useState } from 'react'
 import Title from './Component/Title'
 import Calculator from './Component/Calculator'
-import './App.css'
 
 function App() {
   const calcStyle = {
     display: 'flex',
-    justifyContent: 'center' 
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    backgroundColor: 'rgb(26, 35, 32)',
+    width: '280px',
+    height: '380px',
+    borderRadius: '5px'
+
   }
 
   return (
-    <body style={{}}>
-      <div>
-        <Title text="Calculator9000"></Title>
-      </div>
-      <div style={{...calcStyle}}>
+    <body>
+      <div style={{...calcStyle }}>
+      <Title text="0"></Title>
         <Calculator></Calculator>
       </div>
     </body>

@@ -10,11 +10,11 @@ function Calculator() {
         padding: '0px',
         gap: '2px' 
     }
-    /*const [state, setState] = React.useState({})*/
+    
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: "2px" }}>
              <div>
-                <BeautifulScreen calcul="" result=""></BeautifulScreen>
+                <BeautifulScreen calcul="12 + 52" result="64"></BeautifulScreen>
             </div>
             <ul style={{...listStyle}}>
                 <li><Btn.Number nb="%">uyho</Btn.Number></li>

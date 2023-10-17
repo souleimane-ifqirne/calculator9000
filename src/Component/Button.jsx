@@ -2,14 +2,6 @@ import { useState } from "react";
 import { BackspaceOutline } from "react-ionicons";
 import { CaretBackCircleOutline } from 'react-ionicons'
 
-
-{/** <CaretBackCircleOutline
-  color={'#00000'} 
-  title={}
-  height="250px"
-  width="250px"
-/> */}
-
 const Logo = (props) => {
     return (
         <div style={{backgroundColor: "#2d3534", ...btnStyle }}>
