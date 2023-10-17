@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BackspaceOutline } from "react-ionicons";
 import { CaretBackCircleOutline } from 'react-ionicons'
 
