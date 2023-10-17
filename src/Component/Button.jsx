@@ -3,7 +3,7 @@ import { CaretBackCircleOutline } from 'react-ionicons'
 
 const Logo = (props) => {
     return (
-        <div style={{ backgroundColor: "#2d3534", ...btnStyle }} onClick={props.onClick}>
+        <div className="operator" style={{ ...btnStyle }} onClick={props.onClick}>
             <p style={{ ...inBtnStyle }}>
                 {props.logo == 0 && (<BackspaceOutline style={{ ...inBtnStyle }} color={"white"} height="20px" width="20px" />)}
                 {props.logo == 1 && (<CaretBackCircleOutline color={"white"} height="20px" width="20px" />)}
@@ -22,7 +22,7 @@ const Number = (props) => {
 
 const Operator = (props) => {
     return (
-        <div style={{ backgroundColor: "#2d3534", ...btnStyle }} onClick={props.onClick}>
+        <div className="operator" style={{ ...btnStyle }} onClick={props.onClick}>
             <p style={{ ...inBtnStyle }}>{props.op}</p>
         </div>
     );
@@ -30,7 +30,7 @@ const Operator = (props) => {
 
 const Equal = (props) => {
     return (
-        <div style={{ backgroundColor: "#d59adf", ...btnStyle }} onClick={props.onClick}>
+        <div className="equal" style={{ ...btnStyle }} onClick={props.onClick}>
             <p style={{ ...inBtnStyle }}
             >{props.eq}</p>
         </div>
@@ -43,7 +43,6 @@ const inBtnStyle = {
 };
 
 const btnStyle = {
-    color: "white",
     fontWeight: "bold",
     display: "flex",
     justifyContent: "center",
