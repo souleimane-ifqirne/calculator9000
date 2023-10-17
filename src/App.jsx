@@ -14,10 +14,13 @@ function App() {
   }
 
   return (
+    <body className="calculator">
       <div style={{ ...calcStyle }}>
         <Title text="0"></Title>
         <Calculator></Calculator>
       </div>
+    </body>
+
   )
 }
 
