@@ -1,6 +1,7 @@
 import * as Btn from './Button'
-import { BackspaceOutline } from 'react-ionicons'
 import BeautifulScreen from './Screen'
+import { BackspaceOutline } from 'react-ionicons'
+
 
 function Calculator() {
     const listStyle = {
@@ -12,15 +13,14 @@ function Calculator() {
     /*const [state, setState] = React.useState({})*/
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: "2px" }}>
+             <div>
+                <BeautifulScreen calcul="" result=""></BeautifulScreen>
+            </div>
             <ul style={{...listStyle}}>
                 <li><Btn.Number nb="%">uyho</Btn.Number></li>
                 <li><Btn.Number nb="c"></Btn.Number></li>
-                <li><span><Btn.Logo><BackspaceOutline
-                    color={'red'}
-                    height="20px"
-                    width="20px"
-                /></Btn.Logo></span></li>
                 <li><Btn.Operator op="÷"></Btn.Operator></li>
+                <li><Btn.Logo logo="0"></Btn.Logo></li>
             </ul>
             <ul style={{...listStyle}}>
                 <li><Btn.Number nb="7"></Btn.Number></li>
@@ -46,11 +46,6 @@ function Calculator() {
                 <li><Btn.Number nb=","></Btn.Number></li>
                 <li><Btn.Equal eq="="></Btn.Equal></li>
             </ul>
-            {/*<BackspaceOutline
-                    color={'black'}
-                    height="20px"
-                    width="20px"
-                />*/}
         </div>
     )
 }
