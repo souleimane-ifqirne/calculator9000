@@ -1,6 +1,5 @@
-import { useState } from "react";
-
 const BeautifulScreen = (props) => {
+
     const ScreenStyle = {
         display: 'flex',
         width: '261.5px',

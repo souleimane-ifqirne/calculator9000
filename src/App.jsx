@@ -1,6 +1,6 @@
 import Title from './Component/Title'
 import Calculator from './Component/Calculator'
-
+import './App.css'
 function App() {
   const calcStyle = {
     display: 'flex',
@@ -11,17 +11,13 @@ function App() {
     width: '280px',
     height: '380px',
     borderRadius: '5px'
-
   }
 
   return (
-    <body>
-      <div style={{...calcStyle }}>
-      <Title text="0"></Title>
+      <div style={{ ...calcStyle }}>
+        <Title text="0"></Title>
         <Calculator></Calculator>
       </div>
-    </body>
-
   )
 }
 

@@ -1,13 +1,12 @@
-import { useState } from "react";
 import { BackspaceOutline } from "react-ionicons";
 import { CaretBackCircleOutline } from 'react-ionicons'
 
 const Logo = (props) => {
     return (
-        <div style={{backgroundColor: "#2d3534", ...btnStyle }}>
+        <div style={{ backgroundColor: "#2d3534", ...btnStyle }} onClick={props.onClick}>
             <p style={{ ...inBtnStyle }}>
                 {props.logo == 0 && (<BackspaceOutline style={{ ...inBtnStyle }} color={"white"} height="20px" width="20px" />)}
-                {props.logo == 1 && (<CaretBackCircleOutline color={"white"} height="20px" width="20px"/>)}
+                {props.logo == 1 && (<CaretBackCircleOutline color={"white"} height="20px" width="20px" />)}
             </p>
         </div>
     );
@@ -15,7 +14,7 @@ const Logo = (props) => {
 
 const Number = (props) => {
     return (
-        <div style={{ backgroundColor: "#363e3d", ...btnStyle }}>
+        <div className="number" style={{...btnStyle }} onClick={props.onClick}>
             <p style={{ ...inBtnStyle }}>{props.nb}</p>
         </div>
     );
@@ -23,7 +22,7 @@ const Number = (props) => {
 
 const Operator = (props) => {
     return (
-        <div style={{ backgroundColor: "#2d3534", ...btnStyle }}>
+        <div style={{ backgroundColor: "#2d3534", ...btnStyle }} onClick={props.onClick}>
             <p style={{ ...inBtnStyle }}>{props.op}</p>
         </div>
     );
@@ -31,8 +30,9 @@ const Operator = (props) => {
 
 const Equal = (props) => {
     return (
-        <div style={{ backgroundColor: "#d59adf", ...btnStyle }}>
-            <p style={{ ...inBtnStyle }}>{props.eq}</p>
+        <div style={{ backgroundColor: "#d59adf", ...btnStyle }} onClick={props.onClick}>
+            <p style={{ ...inBtnStyle }}
+            >{props.eq}</p>
         </div>
     );
 };
@@ -51,5 +51,4 @@ const btnStyle = {
     height: "3em",
     borderRadius: "5px",
 };
-
 export { Number, Equal, Operator, Logo };
