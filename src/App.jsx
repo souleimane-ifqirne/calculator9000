@@ -1,7 +1,23 @@
 import Title from './Component/Title'
 import Calculator from './Component/Calculator'
+import React from 'react';
+import Draggable from 'react-draggable';
+import { Resizable } from 'react-resizable';
 import './App.css'
+
 function App() {
+
+  const TitleStyle = {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    width: '100%',
+    height: '15px',
+    margin: '0px',
+    gap: '3px',
+    color: '#cdd1d1'
+}
+
   const calcStyle = {
     display: 'flex',
     justifyContent: 'center',
@@ -14,13 +30,12 @@ function App() {
   }
 
   return (
-    <body className="calculator">
-      <div style={{ ...calcStyle }}>
-        <Title text="0"></Title>
-        <Calculator></Calculator>
-      </div>
-    </body>
-
+    <Draggable handle="strong">
+          <div style={{ ...calcStyle }}>
+            <strong style={{...TitleStyle}}><Title text="0"></Title></strong>
+            <Calculator></Calculator>
+          </div>
+    </Draggable>
   )
 }
 
