@@ -1,11 +1,12 @@
 import { BackspaceOutline } from "react-ionicons";
 import { CaretBackCircleOutline } from 'react-ionicons'
+import '../CSS/Button.css'
 
 const Logo = (props) => {
     return (
-        <div className="operator" style={{ ...btnStyle }} onClick={props.onClick}>
-            <p style={{ ...inBtnStyle }}>
-                {props.logo == 0 && (<BackspaceOutline style={{ ...inBtnStyle }} color={"white"} height="20px" width="20px" />)}
+        <div className="operator" onClick={props.onClick}>
+            <p className="btnPosition">
+                {props.logo == 0 && (<BackspaceOutline className="btnPosition" color={"white"} height="20px" width="20px" />)}
                 {props.logo == 1 && (<CaretBackCircleOutline color={"white"} height="20px" width="20px" />)}
             </p>
         </div>
@@ -14,40 +15,27 @@ const Logo = (props) => {
 
 const Number = (props) => {
     return (
-        <div className="number" style={{...btnStyle }} onClick={props.onClick}>
-            <p style={{ ...inBtnStyle }}>{props.nb}</p>
+        <div className="number" onClick={props.onClick}>
+            <p className="btnPosition">{props.nb}</p>
         </div>
     );
 };
 
 const Operator = (props) => {
     return (
-        <div className="operator" style={{ ...btnStyle }} onClick={props.onClick}>
-            <p style={{ ...inBtnStyle }}>{props.op}</p>
+        <div className="operator" onClick={props.onClick}>
+            <p className="btnPosition">{props.op}</p>
         </div>
     );
 };
 
 const Equal = (props) => {
     return (
-        <div className="equal" style={{ ...btnStyle }} onClick={props.onClick}>
-            <p style={{ ...inBtnStyle }}
+        <div className="equal" onClick={props.onClick}>
+            <p className="btnPosition"
             >{props.eq}</p>
         </div>
     );
 };
 
-const inBtnStyle = {
-    display: "flex",
-    alignItems: "center",
-};
-
-const btnStyle = {
-    fontWeight: "bold",
-    display: "flex",
-    justifyContent: "center",
-    width: "4em",
-    height: "3em",
-    borderRadius: "5px",
-};
 export { Number, Equal, Operator, Logo };

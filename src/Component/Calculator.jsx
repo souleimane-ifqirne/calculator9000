@@ -1,15 +1,17 @@
 import * as Btn from './Button'
 import BeautifulScreen from './Screen'
 import React, { useState } from "react";
-
+import '../CSS/Calculator.css'
 
 function Calculator() {
     const listStyle = {
         display: 'inline-flex',
+        height: '45%',
         margin: '0px',
         padding: '0px',
         gap: '2px'
     }
+
     const [expression, setExpression] = useState("");
     const [result, setResult] = useState("0");
 
@@ -48,7 +50,7 @@ function Calculator() {
       };
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: "2px" }}>
+        <div style={{ display: 'flex', flexDirection: 'column',height: '95%', gap: "2px" }}>
             <div>
                 <BeautifulScreen calcul={expression} result={result}></BeautifulScreen>
             </div>
