@@ -1,3 +1,18 @@
+.listStyle {
+    display: inline-flex;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    gap: 2px;
+}
+.calculatorDiv {
+    display: flex;
+    flex-direction: column;
+    height: 94%;
+    gap: 3px;
+    padding: 2px;
+}
+
 li {
     width: 100%;
 }

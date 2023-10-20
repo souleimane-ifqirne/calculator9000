@@ -1,9 +1,9 @@
 import { CalculatorOutline } from 'react-ionicons'
+import React, { useState } from "react";
+import TitleBar from './TitleBar'
 import '../CSS/Title.css'
 
-
 const Title = (props) => {
-
     return (
         <div className="titleDiv">
             <strong>
@@ -12,10 +12,17 @@ const Title = (props) => {
                     height="15px"
                     width="15px"
                     style={{
-                        marginLeft: '5px'
+                        marginTop: '5px',
+                        marginLeft: '10px',
+                        marginRight: '5px'
                     }}
                 />)} Calculator</div>
             </strong>
+            <div className="titleBar" >
+                    <TitleBar children="hide" />
+                    <TitleBar children="size" />
+                    <TitleBar className="cross" children="cross" closeCalculator={props.closeCalculator}/>
+                </div>
         </div>
     )
 }

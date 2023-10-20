@@ -1,6 +1,45 @@
 .titleDiv {
+    display: flex;
     width: 100%;
     height: 5%;
-    gap: 3px;
     color: #cdd1d1;
+}
+
+.titleDiv strong {
+    display: flex;
+    width: 90%;
+}
+
+.barPosition {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 3px;
+}
+.titleBar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.title-bar:nth-child(1), .title-bar:nth-child(2), .title-bar:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 25px;
+}
+
+.title-bar:nth-child(1):hover, .title-bar:nth-child(2):hover {
+    transition: 0.3s ease;
+    background-color: rgba(45, 53, 52, 1);
+}
+
+.title-bar:nth-child(3) {
+    border-radius: 0px 3px 0px 0px;
+}
+.title-bar:nth-child(3):hover {
+    background-color: red;
+    transition: 0.3s, ease;
 }

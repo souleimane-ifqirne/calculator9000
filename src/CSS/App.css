@@ -5,6 +5,7 @@
     background-image: url(../../assets/windowsScreen.png);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 * {
@@ -18,13 +19,12 @@
     background-color: rgb(26, 35, 32);
     width: 280px;
     height: 380px;
-    min-height: 430px;
-    min-width: 300px;
+    min-height: 455px;
+    min-width: 310px;
     border-radius: 7px;
     resize: both;
     overflow: auto;
-    border: 1px solid purple;
-    padding: 5px;
+    border: 0.5px solid purple;
 }
 
 .calculator {
