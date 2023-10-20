@@ -19,8 +19,8 @@ const Title = (props) => {
                 />)} Calculator</div>
             </strong>
             <div className="titleBar" >
-                    <TitleBar children="hide" />
-                    <TitleBar children="size" />
+                    <TitleBar children="hide" hideCalculator={props.hideCalculator}/>
+                    <TitleBar children="size" largeScreen={props.largeScreen} />
                     <TitleBar className="cross" children="cross" closeCalculator={props.closeCalculator}/>
                 </div>
         </div>

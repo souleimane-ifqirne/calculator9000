@@ -1,7 +1,6 @@
 import { RemoveOutline } from 'react-ionicons'
 import { SquareOutline } from 'react-ionicons'
 import { CloseOutline } from 'react-ionicons'
-import React, { useState } from "react";
 import '../CSS/Title.css'
 
 
@@ -9,7 +8,7 @@ import '../CSS/Title.css'
 
 const TitleBar = (props) => {
 
-  return <div className="title-bar" onClick={props.closeCalculator}>{props.children == "cross" &&
+  return <div className="title-bar" onClick={props.closeCalculator || props.largeScreen || props.hideCalculator}>{props.children == "cross" &&
     (<CloseOutline
       color={'#ffffff'}
       className="barPosition"
